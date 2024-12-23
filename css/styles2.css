@@ -1,0 +1,141 @@
+/* Reset básico */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #d1bc00;
+    color: #000000;
+    padding: 10px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens do menu quebrem linha em telas menores */
+}
+
+header nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+header nav ul li .logo {
+    max-height: 60px;
+}
+
+.categorias {
+    text-align: center;
+    padding: 20px;
+}
+
+.categorias h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.produtos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Permite que os produtos fiquem em linhas diferentes em telas menores */
+}
+
+.produto {
+    width: 100%;
+    max-width: 300px; /* Garante que o produto não ultrapasse 300px */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto h2 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.produto .btn {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.produto .btn:hover {
+    background-color: #005bb5;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column; /* Empilha o menu em telas menores */
+        gap: 10px; /* Reduz o espaçamento entre os itens */
+    }
+
+    .produto {
+        width: 90%; /* Garante espaço nas laterais em telas menores */
+    }
+
+    .produtos {
+        gap: 10px; /* Reduz espaçamento entre produtos em telas menores */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    header nav ul li a {
+        font-size: 1rem; /* Reduz o tamanho do texto no menu */
+    }
+
+    .produto img {
+        height: 150px; /* Ajusta a altura das imagens em telas muito pequenas */
+    }
+
+    .produto .btn {
+        padding: 8px 16px; /* Ajusta os botões para telas pequenas */
+    }
+}
